@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candylicious Shop</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      height: 70px;
+      transition: all 0.5s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      animation: bounceIn 0.8s ease;
+    }
+
+    nav.scrolled {
+      background: linear-gradient(90deg, #db7093, #ff69b4);
+      height: 60px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: all 0.3s ease;
+    }
+
+    nav a::before {
+      content: "🍬 ";
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: -5px;
+      left: 0;
+      background: white;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fffacd;
+      text-shadow: 0 0 10px #fffacd;
+      transform: scale(1.1);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:active {
+      transform: scale(0.95);
+      text-shadow: 0 0 15px #fffacd;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: translateY(-100%); }
+      60% { transform: translateY(10%); }
+      80% { transform: translateY(-5%); }
+      100% { transform: translateY(0); }
+    }
+
+    header {
+      padding-top: 120px;
+      text-align: center;
+      font-size: 3rem;
+      color: #ff69b4;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+    .candies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .candy-card {
+      background: #ffe4e1;
+      border-radius: 15px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .candy-card:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .candy-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .candy-card h3 {
+      margin: 10px 0 5px;
+      color: #db7093;
+    }
+
+    footer {
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="#">Home</a>
+    <a href="#candies">Candies</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    🍭 Welcome to Candylicious! 🍭
+  </header>
+
+  <section class="section" id="candies">
+    <h2>Our Sweet Collection</h2>
+    <div class="candies">
+      <div class="candy-card">
+        <img src="C:\Users\Shruti Chakraborty\Pictures\images.jpg" alt="Candy 1">
+        <h3>Gummy Bears</h3>
+        <p>Colorful, chewy, and bursting with fruity flavor.</p>
+      </div>
+      <div class="candy-card">
+        <img src="C:\Users\Shruti Chakraborty\Pictures\easy-chocolate-truffles-recipe.jpg" alt="Candy 2">
+        <h3>Chocolate Truffles</h3>
+        <p>Rich and creamy, melt-in-your-mouth goodness.</p>
+      </div>
+      <div class="candy-card">
+        <img src="C:\Users\Shruti Chakraborty\Pictures\lollypop-500x500.WEBP" alt="Candy 3">
+        <h3>Lollipops</h3>
+        <p>Classic swirl pops in every color of the rainbow.</p>
+      </div>
+      <div class="candy-card">
+        <img src="C:\Users\Shruti Chakraborty\Pictures\61GqlavEIFL._UF1000,1000_QL80_.jpg" alt="Candy 4">
+        <h3>Marshmallows</h3>
+        <p>Soft, fluffy, perfect for roasting or snacking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>At Candylicious, we believe life is sweeter with a little treat! Our mission is to bring smiles with the finest candies, from nostalgic classics to trendy new bites. Each piece is made with love and quality ingredients to make your day extra sweet.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Got a sweet tooth? Reach out to us anytime! 🍭</p>
+    <p>Email: <a href="mailto:hello@candylicious.com">hello@candylicious.com</a></p>
+    <p>Follow us on Instagram: <a href="#">@candylicious</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Candylicious. All Rights Reserved.
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
